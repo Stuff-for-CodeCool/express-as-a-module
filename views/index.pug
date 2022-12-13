@@ -1,4 +1,13 @@
 extends template.pug
 
 block content
-    p merge
+    //- atribute
+    form(action="/api", method="post") 
+        label(for="nume") Nume
+        input#nume(type="text", name="nume")
+        //- are si id ^
+
+        label(for="prenume") Prenume
+        input#prenume(type="text", name="prenume")
+
+        button(type="submit") Submit

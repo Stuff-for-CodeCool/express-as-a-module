@@ -1,5 +1,8 @@
 import { Router } from "express";
 
 export default Router()
-    .get("/", (req, res) => res.send("get pe api"))
-    .post("/", (req, res) => res.send("post pe api"))
+    .get("/", (req, res) => res.render("index"))
+    .post("/", (req, res) => {
+        const { nume, prenume } = req.body;
+        res.render("result", { n: nume, p: prenume });
+    });
